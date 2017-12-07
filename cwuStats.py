@@ -2,15 +2,25 @@
 import subprocess as sub
 from bs4 import BeautifulSoup
 
-printText="Script for fetching local temp statistics from CWU system"
+printText="\n *Script for fetching local temp statistics from CWU system"
 print printText+"\n"
 
 
+def getCWUIP():
+	cmd="/usr/sbin/arp"
+	params=" -vn|grep 00:80:e1:b0:d5:4e|awk '{print $1}'"
+	p = sub.Popen([cmd,params],stdout=sub.PIPE,stderr=sub.PIPE)
+	ip,errors=p.communicate()
+	print ip
+	return ip
+
 cmd = "curl"
-url= "http://192.168.0.107/index.shtml"
+#ip = getCWUIP()
+ip="192.168.0.10"
+
+url= "http://"+ip+"/index.shtml"
 p = sub.Popen([cmd,url],stdout=sub.PIPE,stderr=sub.PIPE)
 output,errors=p.communicate()
-
 
 
 def parseHTML2Map(in_doc):
