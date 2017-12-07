@@ -1,0 +1,130 @@
+﻿<!--    %appdata%\xbmc\userdata\keymaps\remote panasonic viera.xml      for WINDOWS            -->
+<!--    \home\pi\.xbmc\userdata\keymaps\remote panasonic viera.xml      for LINUX            -->
+<!--    In \userdata\keymaps remove remote.xml or any other .xml file, that is using <remote> commands,    -->
+<!--    and replace it with this file                                    -->
+<!--    file name is not important, since XBMC looks in all .xml files for <remote> commands.        -->
+<!--    I've put commands in <Home> section, because some commands are already set in global remote.xml    -->
+<!--    if you need help, feel free to mail me sass@siol.com                        -->
+
+
+<keymap>
+      <global>
+            <remote>
+
+
+                  <left>Left</left>
+                  <right>Right</right>
+                  <up>Up</up>
+                  <down>Down</down>
+            <select>Select</select>
+
+            <title>FullScreen</title>
+            <back>Back</back>
+            <clear>PreviousMenu</clear>
+
+                  <zero>Number0</zero>
+                  <one>Number1</one>
+                  <two>Number2</two>
+                  <three>Number3</three>
+                  <four>Number4</four>
+                  <five>Number5</five>
+                  <six>Number6</six>
+                  <seven>Number7</seven>
+                  <eight>Number8</eight>
+                  <nine>Number9</nine>
+
+            <pageplus>PageUp</pageplus>
+                  <pageminus>PageDown</pageminus>
+
+                  <play>Play</play>
+                  <pause>Pause</pause>
+                  <stop>Stop</stop>
+                  <record>Notification(Keypress, You pressed record!, 3)</record>
+            <skipminus>SkipPrevious</skipminus>
+            <skipplus>SkipNext</skipplus>
+
+                  <guide>FullScreen</guide>
+                  <teletext>NextSubtitle </teletext>
+                  <subtitle>ShowSubtitles</subtitle>
+
+
+            </remote>
+      </global>
+
+    <Home>
+        <remote>
+
+                  <red>XBMC.ActivateWindow(Weather)</red>
+                  <green>XBMC.ActivateWindow(MyVideos)</green>
+                 <yellow>XBMC.ActivateWindow(MyMusic)</yellow>
+                  <blue>XBMC.ActivateWindow(MyPictures)</blue>
+
+            <clear>ActivateWindow(shutdownmenu)</clear>
+            <back>ActivateWindow(Favourites)</back>
+        </remote>
+    </Home>
+
+
+    <FullscreenVideo>
+        <remote>
+                  <back>Fullscreen</back>
+                  <down>VolumeDown</down>
+                  <up>VolumeUp</up>
+            <left>StepBack</left>
+                  <right>StepForward</right>
+            <select>OSD</select>
+
+            <skipminus>BigStepBack</skipminus>
+            <skipplus>BigStepForward</skipplus>
+
+
+                  <pageplus>SubtitleDelayMinus</pageplus>
+                  <pageminus>SubtitleDelayPlus</pageminus>
+
+                  <red>RunScript(script.xbmc.subtitles)</red>
+                  <green>RunScript(script.xbmc.subtitles)</green>
+                  <yellow>RunScript(script.xbmc.subtitles)</yellow>
+                  <blue>RunScript(script.xbmc.subtitles)</blue>
+            <subtitle>RunScript(script.xbmc.subtitles)</subtitle>
+
+                  <zero>Pause</zero>
+                  <one>Pause</one>
+                  <two>Pause</two>
+                  <three>Pause</three>
+                  <four>Pause</four>
+                  <five>Pause</five>
+                  <six>Pause</six>
+                  <seven>Pause</seven>
+                  <eight>Pause</eight>
+                  <nine>Pause</nine>
+
+            </remote>
+      </FullscreenVideo>
+
+    <MyVideoLibrary>
+            <remote>                  
+                  <red>ToggleWatched</red>
+                  <green>ToggleWatched</green>
+                  <yellow>ToggleWatched</yellow>
+                  <blue>ToggleWatched</blue>
+            </remote>
+    </MyVideoLibrary>
+
+      <MyVideoFiles>
+            <remote>
+                  <red>ToggleWatched</red>
+                  <green>ToggleWatched</green>
+                  <yellow>ToggleWatched</yellow>
+                  <blue>ToggleWatched</blue>
+            </remote>
+      </MyVideoFiles>
+
+      <VideoOSD>
+            <remote>
+                  <red>Fullscreen</red>
+                  <green>Fullscreen</green>
+                  <yellow>Fullscreen</yellow>
+                  <blue>Fullscreen</blue>
+            </remote>
+      </VideoOSD>
+</keymap>
