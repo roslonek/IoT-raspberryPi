@@ -1,0 +1,84 @@
+
+str = [[<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta HTTP-EQUIV="content-type" content="text/html; charset=utf-8" />
+	<meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+	<meta name="handheldFriendly" content="true" />              
+	<meta name="viewport" content="width=device-width; initial-scale=1"; user-scalable="yes" />
+	
+	<title>MultiFun Control System</title>
+	<link ID="styl_id" rel="stylesheet" type="text/css" media="screen"/> <!--href="style.css"-->
+	<script language="javascript">
+		var szer = window.screen.width;
+		if(navigator.userAgent.indexOf('Opera Mini') > -1)
+		{
+			if(szer <= 1024){ document.getElementById('styl_id').href = "opmini.css"; }
+			else{ document.getElementById('styl_id').href = "style.css"; }
+		}
+		else
+		{
+			if(szer <= 800) {document.getElementById('styl_id').href = "styleh.css"; }
+			else if(szer <= 1024){document.getElementById('styl_id').href = "style600.css";}
+			else{document.getElementById('styl_id').href = "style.css";}
+		}
+	</script>
+</head>
+<body>
+	<div id="glowny">
+		<div id="obrazek">
+			<div id="ziel"><h1 class="green">MultiFun Control System</h1></div>
+			<!--temperatury od róry-->
+			<!--spaliny-->
+			<div id="spaliny"><h1 class="black">22</h1></div>
+			<!--zewnętrzna-->
+			<div id="zewnetrzna"><h1 style="font-size: 42px;" class="blue">19</h1></div>
+			<!--pokojowa1-->
+			<div id="pokojowa1"><h1 class="cherry"></h1></div>
+			<!--pokojowa2-->
+			<div id="pokojowa2"><h1 class="cherry">20.1</h1></div>
+			<!--CO1-->
+			<div id="CO1"><h1 class="red">19</h1></div>
+			<!--CO2-->
+			<div id="CO2"><h1 class="red">19</h1></div>
+			<!--Kocioł-->
+			<div id="kociol"><h1 class="red">20</h1></div>
+			<!--CWU-->
+			<div id="CWU"><h1 class="red">39</h1></div>
+			<!--Wyliczone-->
+			<!--Pokój 1-->
+			<div id="pokoj1"><h2>20.0</h2></div>
+			<!--Pokój 2-->
+			<div id="pokoj2"><h2>10.0</h2></div>
+			<!--CO 1-->
+			<div id="WCO1"><h2>0</h2></div>
+			<!--CO 2-->
+			<div id="WCO2"><h2>0</h2></div>
+			<!--Kotla-->
+			<div id="WKOC"><h2>60</h2></div>
+			<!--CWU-->
+			<div id="WCWU"><h2>0</h2></div>
+			<form method="get" action="/opts.cgi">
+				<div id="th1"><input type="text" name="TH1" size="4" value="20.0"></div>
+				<div id="th2"><input type="text" name="TH2" size="4" value="10.0"></div>
+				<div id="th3"><input type="text" name="TH3" size="4" value="46"></div>
+]]
+
+pagetext = [[alo
+     123"]]
+
+
+
+for i = 1, 5 do
+  print("A number: " .. i)
+end
+
+
+regex="<div id=\"(.-)\">.->(.-)<.-</div>"
+
+ t = {}
+     for k,v in string.gmatch(str, "<div id=\"(.-)\">.->(.-)<.-</div>") do
+       t[k] = v
+       print ( k, "=", v )
+     end
+
