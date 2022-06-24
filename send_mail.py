@@ -1,7 +1,7 @@
 import smtplib
-GMAIL_USER = 'myrf@interia.pl'
-GMAIL_PASS = 'gufno'
-SMTP_SERVER = 'smtp.interia.pl'
+GMAIL_USER = 'xxx'
+GMAIL_PASS = 'xxx'
+SMTP_SERVER = 'xxx'
 SMTP_PORT = 587
 
 def send_email(recipient, subject, text):
@@ -15,4 +15,4 @@ def send_email(recipient, subject, text):
 	msg = header + '\n' + text + ' \n\n'
 	smtpserver.sendmail(GMAIL_USER, recipient, msg)
 	smtpserver.close()
-send_email('roslonek@gmail.com', 'Subject', 'this is text')
+send_email('xxxx', 'Subject', 'this is text')

@@ -1,6 +1,8 @@
 #!/bin/bash
-sed -i 's/<setting id="username" value=""/<setting id="username" value="MsMyrf"/g' /home/pi/.xbmc/userdata/addon_data/plugin.video.youtube/settings.xml
-sed -i 's/<setting id="username" value=""/<setting id="user_password" value="116744"/g' /home/pi/.xbmc/userdata/addon_data/plugin.video.youtube/settings.xml
+PASS=xxx
+USR=user
+sed -i 's/<setting id="username" value=""/<setting id="username" value="$USER"/g' /home/pi/.xbmc/userdata/addon_data/plugin.video.youtube/settings.xml
+sed -i 's/<setting id="username" value=""/<setting id="user_password" value="$PASS"/g' /home/pi/.xbmc/userdata/addon_data/plugin.video.youtube/settings.xml
 cat /home/pi/.xbmc/userdata/addon_data/plugin.video.youtube/settings.xml |grep user
 
 

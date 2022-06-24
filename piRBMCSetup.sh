@@ -2,6 +2,8 @@
 
 #invoke as ROOT
 
+USER=user
+
 #If you power up your Raspberry before your TV or AV Receiver is switched on your
 # Raspberry Pi doesn’t detect an HDMI output device. As a result it falls back to composite 
 #output and you’ll just see a black screen once you turn on your TV.
@@ -14,8 +16,8 @@ echo "install apache "
 sudo apt-get install apache2
 
 echo "creating a new user"
-#add user robert ( prompt )
-adduser robert
+#add user USER ( prompt )
+adduser $USER
 #echo "add sudo"
 
 #sed -i 's/old-word/new-word/g' *.txt
@@ -31,7 +33,7 @@ apt-get install ssh
 
 echo "Allowing to login only Local and Robert in etc/ssh/ssh_config"
 echo "PermitRootLogin no" >> /etc/ssh/ssh_config
-echo "AllowUsers *@192.168.*.* robert">> /etc/ssh/ssh_config
+echo "AllowUsers *@192.168.*.* $USER">> /etc/ssh/ssh_config
 
 echo "firewall enable ssh /etc/network/if-up.d/secure-rmc"
 # iptables -A INPUT -i $IFACE -j DROP

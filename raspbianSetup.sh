@@ -6,9 +6,10 @@
 # Raspberry Pi doesn’t detect an HDMI output device. As a result it falls back to composite 
 #output and you’ll just see a black screen once you turn on your TV.
 
+USER=user
 echo "creating a new user"
 #add user robert ( prompt )
-#adduser robert
+adduser $USER
 #echo "add sudo"
 
 #sed -i 's/old-word/new-word/g' *.txt
@@ -22,9 +23,9 @@ PATH=$PATH:/sbin
 
 #echo "installing full ssh server"
 #apt-get install ssh
-#echo "Allowing to login only Local and Robert in etc/ssh/ssh_config"
+#echo "Allowing to login only Local and $USER in etc/ssh/ssh_config"
 #echo "PermitRootLogin no" >> /etc/ssh/ssh_config
-#echo "AllowUsers *@192.168.*.* robert">> /etc/ssh/ssh_config
+#echo "AllowUsers *@192.168.*.* $USER">> /etc/ssh/ssh_config
 #echo "firewall enable ssh /etc/network/if-up.d/secure-rmc"
 # iptables -A INPUT -i $IFACE -j DROP
 #sed -i 's/iptables -A INPUT -i $IFACE -j DROP/iptables -A INPUT -i $IFACE -p tcp --dport 22 -j ACCEPT\niptables -A INPUT -i $IFACE -j DROP/g' /etc/network/if-up.d/secure-rmc
